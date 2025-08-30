@@ -87,32 +87,32 @@ function M.setup_highlights(override)
     { "FzfLuaFilePart",          "file_part",      { default = default, link = "@none" } },
     -- Fzf terminal hls, colors from `vim.api.nvim_get_color_map()`
     { "FzfLuaHeaderBind", "header_bind",
-      { default = default, fg = is_light and "MediumSpringGreen" or "BlanchedAlmond" } },
+      { default = default, link = "WarningMsg" } },
     { "FzfLuaHeaderText", "header_text",
-      { default = default, fg = is_light and "Brown4" or "Brown1" } },
+      { default = default, link = "Constant" } },
     { "FzfLuaPathColNr", "path_colnr",   -- qf|diag|lsp
-      { default = default, fg = is_light and "CadetBlue4" or "CadetBlue1" } },
+      { default = default, link = "FzfLuaNormal" } },
     { "FzfLuaPathLineNr", "path_linenr", -- qf|diag|lsp
-      { default = default, fg = is_light and "MediumSpringGreen" or "LightGreen" } },
+      { default = default, link = "Number" } },
     { "FzfLuaLivePrompt", "live_prompt", -- "live" queries prompt text color
-      { default = default, fg = is_light and "PaleVioletRed1" or "PaleVioletRed1" } },
+      { default = default, link = "Special" } },
     { "FzfLuaLiveSym", "live_sym",       -- lsp_live_workspace_symbols query
-      { default = default, fg = is_light and "PaleVioletRed1" or "PaleVioletRed1" } },
+      { default = default, link = "Special" } },
     -- lines|blines|treesitter
     { "FzfLuaBufId",     "buf_id",     { default = default, link = "TabLine" } },
     { "FzfLuaBufName",   "buf_name",   { default = default, link = "Directory" } },
     { "FzfLuaBufLineNr", "buf_linenr", { default = default, link = "LineNr" } },
     -- buffers|tabs
     { "FzfLuaBufNr", "buf_nr",
-      { default = default, fg = is_light and "AquaMarine3" or "BlanchedAlmond" } },
-    { "FzfLuaBufFlagCur", "buf_flag_cur",
-      { default = default, fg = is_light and "Brown4" or "Brown1" } },
+      { default = default, link = "Number" } },
+    -- { "FzfLuaBufFlagCur", "buf_flag_cur",
+    --   { default = default, link = "Constant" } },
     { "FzfLuaBufFlagAlt", "buf_flag_alt",
-      { default = default, fg = is_light and "CadetBlue4" or "CadetBlue1" } },
+      { default = default, link = "Special" } },
     { "FzfLuaTabTitle", "tab_title",   -- tabs only
-      { default = default, fg = is_light and "CadetBlue4" or "LightSkyBlue1", bold = true } },
+      { default = default, link = "Directory" } },
     { "FzfLuaTabMarker", "tab_marker", -- tabs only
-      { default = default, fg = is_light and "MediumSpringGreen" or "BlanchedAlmond", bold = true } },
+      { default = default, link = "Special" } },
     -- highlight groups for `fzf_colors=true`
     { "FzfLuaFzfNormal",     "fzf.normal",     { default = default, link = "FzfLuaNormal" } },
     { "FzfLuaFzfCursorLine", "fzf.cursorline", { default = default, link = "FzfLuaCursorLine" } },
